@@ -90,6 +90,7 @@ void solve()
     rbt[i]=bt[i];//remaining burst time
    for(int i=0;i<n;i++)
    {
+       bool flag=true;
        int temp_pid=i,temp_prt=INT_MAX;
         for(int j=0;j<n;j++)
         {
@@ -97,12 +98,14 @@ void solve()
             {
                 if(art[j]<=timepassed&&prt[j]<temp_prt)
                 {
+                    flag=false;
                     temp_pid=j;//4th process let say and at any index
                     temp_prt=prt[j];
                 }
             }
         }
          timepassed++;//linearly chlo ekla chlo
+         if(!flag)
         rbt[temp_pid]--;
       if(rbt[temp_pid]==0)//mtlb ek process khtm
         ct[temp_pid]=timepassed;
