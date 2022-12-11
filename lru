@@ -93,6 +93,7 @@ void solve()
               q.push(qt.front());
               qt.pop();
           }
+          q.push(indexi);
           hit++;
       }
       else
