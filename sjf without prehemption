@@ -100,8 +100,8 @@ void solve()
         }
         vis[temp_pid]=1;//mark the index as visited
         int rem=0;
-        if(art[i]>cot)
-            rem=art[i]-cot;
+        if(art[temp_pid]>cot)
+            rem=art[temp_pid]-cot;
         if(temp_bt==INT_MAX)//mtlb kuxni mila chota
           temp_bt=bt[i];//as this is the current index thus to be utilized
         ct[temp_pid]=cot+temp_bt+rem;//we found the index thus update its ct
