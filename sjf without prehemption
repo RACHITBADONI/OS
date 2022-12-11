@@ -87,14 +87,14 @@ void solve()
    for(int i=0;i<n;i++)
    {
        int temp_pid=i,temp_bt=INT_MAX;
-        for(int i=0;i<n;i++)
+        for(int j=0;j<n;j++)
         {
-            if(vis[i]!=1)
+            if(vis[j]!=1)
             {
-                if(art[i]<=timepassed&&bt[i]<temp_bt)
+                if(art[j]<=timepassed&&bt[j]<temp_bt)
                 {
-                    temp_pid=i;//4th process let say and at any index
-                    temp_bt=bt[i];
+                    temp_pid=j;//4th process let say and at any index
+                    temp_bt=bt[j];
                 }
             }
         }
